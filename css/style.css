@@ -1,0 +1,42 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+body{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+#tester{
+    width: 70%;
+    margin: 0 auto;
+    height: 850px;
+    border: 3px solid rgb(145, 142, 142);
+}
+
+#controls{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(145, 142, 142);
+    padding: 15px;
+}
+#controls > div {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#controls > div:last-child {margin-bottom: 0;}
+#controls > div > input {width: 30%;}
+#controls > div > label {width: 60%;}
+#controls > div > button {
+    margin: 0 auto;
+    width: 80%;
+    background-color: inherit;
+    border-radius: 0;
+    padding: 3px 10px;
+    border: 3px solid rgb(145, 142, 142);
+    font-weight: bold;
+}
