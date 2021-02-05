@@ -40,9 +40,12 @@ const parenthesisCheck = (expr) => {
     for (let i = 0; i < expr.length; i++) {
         if (expr[i] == "(") countL1++;    
         if (expr[i] == ")") countR1++;
+
+        if (expr[i] == "[") countL2++;    
+        if (expr[i] == "]") countR2++;
     }
 
-    const flag = countL1 == countR1 != 0;
+    const flag = (countL1 == countR1) && (countL2 == countR2);
 
     return flag;
 }
