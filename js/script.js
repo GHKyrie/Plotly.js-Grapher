@@ -5,7 +5,7 @@ const f = (x, y) => Math.abs(x * y);
 
 const getXY = (a, b, n) => {
     const delta = Math.abs(b - a) / n;
-    
+
     let data = [];
 
     for (let i = a; i <= b; i += delta) 
@@ -30,10 +30,40 @@ const getZ = (x, y) => {
     return data;
 };
 
+const parenthesisCheck = (expr) => {
+    let countL1 = 0;
+    let countR1 = 0;
+
+    let countL2 = 0;
+    let countR2 = 0;
+
+    for (let i = 0; i < expr.length; i++) {
+        if (expr[i] == "(") countL1++;    
+        if (expr[i] == ")") countR1++;
+    }
+
+    const flag = countL1 == countR1 != 0;
+
+    return flag;
+}
+
+const getParsedExpression = (expr) => {
+    console.log(`Initial expression: ${expr}`);
+
+    const parCheck = parenthesisCheck(expr);
+    console.warn(parCheck);
+
+    return 0;
+}
+
 btn.addEventListener('click', () => {
-    const a = Number(document.getElementsByTagName('input')[0].value);
-    const b = Number(document.getElementsByTagName('input')[1].value);
-    const n = Number(document.getElementsByTagName('input')[2].value);
+
+    const a = Number(document.getElementsByTagName('input')[1].value);
+    const b = Number(document.getElementsByTagName('input')[2].value);
+    const n = Number(document.getElementsByTagName('input')[3].value);
+
+    let func = document.getElementsByTagName('input')[0].value;
+        func = getParsedExpression(func);
 
     const o_size_w = 850;
     const o_size_h = 850;
