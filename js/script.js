@@ -1,10 +1,11 @@
-const TESTER = document.getElementById('tester');
+const outputBlock = document.getElementById('output');
 const btn = document.getElementsByName('btn')[0];
 
 const f = (x, y) => Math.abs(x * y);
 
 const getXY = (a, b, n) => {
     const delta = Math.abs(b - a) / n;
+    
     let data = [];
 
     for (let i = a; i <= b; i += delta) 
@@ -68,5 +69,5 @@ btn.addEventListener('click', () => {
         height: o_size_h,
     };
 
-    Plotly.newPlot(TESTER, [data_z], layout);
+    Plotly.newPlot(outputBlock, [data_z], layout);
 });
