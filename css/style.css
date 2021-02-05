@@ -21,9 +21,10 @@ body{
     flex-direction: column;
     border: 3px solid rgb(145, 142, 142);
     padding: 15px;
+    width: 12%;
 }
 #controls > div {
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
