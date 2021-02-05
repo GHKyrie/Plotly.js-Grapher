@@ -21,7 +21,7 @@ body{
     flex-direction: column;
     border: 3px solid rgb(145, 142, 142);
     padding: 15px;
-    width: 12%;
+    width: 15%;
 }
 #controls > div {
     width: 100%;
@@ -29,6 +29,7 @@ body{
     justify-content: space-between;
     margin-bottom: 10px;
 }
+#controls > div:first-child input {width: 100%;}
 #controls > div:last-child {margin-bottom: 0;}
 #controls > div > input {width: 30%;}
 #controls > div > label {width: 60%;}
